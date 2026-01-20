@@ -130,6 +130,8 @@ const bingoData = {
 const bingoContainer = document.getElementById('bingo-container');
 const popup = document.getElementById('result-popup');
 const closeButton = document.querySelector('.close-button');
+const likeButton = document.getElementById('like-button');
+const retryButton = document.getElementById('retry-button');
 const selectedMenuEl = document.getElementById('selected-menu');
 const backButton = document.getElementById('back-button');
 const homeButton = document.getElementById('home-button');
@@ -259,9 +261,19 @@ stopButton.addEventListener('click', () => {
 
 closeButton.addEventListener('click', () => {
     popup.classList.add("hidden");
-    // 팝업이 닫힐 때 폭죽 DOM 요소들 제거
-    const confettis = document.querySelectorAll('.confetti');
-    confettis.forEach(c => c.remove());
+    removeConfetti();
+});
+
+likeButton.addEventListener('click', () => {
+    popup.classList.add("hidden");
+    removeConfetti();
+});
+
+retryButton.addEventListener('click', () => {
+    popup.classList.add("hidden");
+    removeConfetti();
+    stopButton.classList.remove("hidden");
+    startRoulette();
 });
 
 window.addEventListener('click', (event) => {
@@ -272,6 +284,11 @@ window.addEventListener('click', (event) => {
 
 // Initial render
 renderBoard();
+
+function removeConfetti() {
+    const confettis = document.querySelectorAll('.confetti');
+    confettis.forEach(c => c.remove());
+}
 
 // --- 폭죽 효과를 위한 스크립트 ---
 function showConfetti() {

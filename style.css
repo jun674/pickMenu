@@ -244,8 +244,51 @@ h1 {
 
 .popup-content p {
     font-size: 1.5em;
-    margin-bottom: 0;
-}
+    margin-bottom: 20px;
+    }
+    
+    .popup-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+    
+    .popup-buttons button {
+        font-family: 'Gaegu', cursive;
+        font-weight: 700;
+        font-size: 1.3em;
+        padding: 12px 25px;
+        cursor: pointer;
+        border: 3px solid var(--text-color);
+        border-radius: 15px;
+        background-color: var(--white);
+        color: var(--text-color);
+        transition: all 0.2s ease-in-out;
+        box-shadow: 4px 4px 0 var(--text-color);
+    }
+    
+    .popup-buttons button:hover, .popup-buttons button:focus {
+        transform: translateY(-2px) translateX(-2px);
+        box-shadow: 6px 6px 0 var(--text-color);
+    }
+    
+    .popup-buttons button:active {
+        transform: translateY(2px) translateX(2px);
+        box-shadow: 2px 2px 0 var(--text-color);
+    }
+    
+    #like-button {
+        background-color: #81c784; /* 부드러운 녹색 */
+        color: var(--white);
+        border-color: #81c784;
+    }
+    
+    #retry-button {
+        background-color: #64b5f6; /* 부드러운 파란색 */
+        color: var(--white);
+        border-color: #64b5f6;
+    }
 
 
 @keyframes pulse {
