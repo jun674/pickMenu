@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘 뭐 먹지? - 빙고</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>오늘 뭐 먹지?</h1>
+    <div id="navigation-bar">
+        <button id="stop-button" class="hidden">STOP!</button>
+        <button id="back-button" class="hidden">뒤로 가기</button>
+        <button id="home-button" class="hidden">처음으로</button>
+    </div>
+    <div id="current-selection"></div>
+    <div id="bingo-container">
+        <!-- 빙고판은 스크립트로 생성됩니다 -->
+    </div>
+
+    <div id="result-popup" class="hidden">
+        <div class="popup-content">
+            <span class="close-button">&times;</span>
+            <h2 id="selected-menu"></h2>
+            <p>오늘 이 메뉴 어떠세요?</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
